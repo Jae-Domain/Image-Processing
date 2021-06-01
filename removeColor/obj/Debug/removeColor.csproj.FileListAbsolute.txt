@@ -8,3 +8,13 @@ C:\Users\JanelleDomantay\source\repos\removeColor\removeColor\obj\Debug\removeCo
 C:\Users\JanelleDomantay\source\repos\removeColor\removeColor\obj\Debug\removeColor.csproj.CoreCompileInputs.cache
 C:\Users\JanelleDomantay\source\repos\removeColor\removeColor\obj\Debug\removeColor.exe
 C:\Users\JanelleDomantay\source\repos\removeColor\removeColor\obj\Debug\removeColor.pdb
+C:\Users\JanelleDomantay\source\repos\removeColor\SRCA-Comic-Research\removeColor\bin\Debug\removeColor.exe.config
+C:\Users\JanelleDomantay\source\repos\removeColor\SRCA-Comic-Research\removeColor\bin\Debug\removeColor.exe
+C:\Users\JanelleDomantay\source\repos\removeColor\SRCA-Comic-Research\removeColor\bin\Debug\removeColor.pdb
+C:\Users\JanelleDomantay\source\repos\removeColor\SRCA-Comic-Research\removeColor\obj\Debug\removeColor.csprojAssemblyReference.cache
+C:\Users\JanelleDomantay\source\repos\removeColor\SRCA-Comic-Research\removeColor\obj\Debug\removeColor.Form1.resources
+C:\Users\JanelleDomantay\source\repos\removeColor\SRCA-Comic-Research\removeColor\obj\Debug\removeColor.Properties.Resources.resources
+C:\Users\JanelleDomantay\source\repos\removeColor\SRCA-Comic-Research\removeColor\obj\Debug\removeColor.csproj.GenerateResource.cache
+C:\Users\JanelleDomantay\source\repos\removeColor\SRCA-Comic-Research\removeColor\obj\Debug\removeColor.csproj.CoreCompileInputs.cache
+C:\Users\JanelleDomantay\source\repos\removeColor\SRCA-Comic-Research\removeColor\obj\Debug\removeColor.exe
+C:\Users\JanelleDomantay\source\repos\removeColor\SRCA-Comic-Research\removeColor\obj\Debug\removeColor.pdb
