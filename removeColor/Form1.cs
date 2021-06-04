@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
+using System.IO;
 
 namespace removeColor
 {
@@ -190,6 +191,19 @@ namespace removeColor
             Colorize(Color.FromArgb(redIntensity.Value, greenIntensity.Value, blueIntensity.Value));
             //Colorize(Color.Green);
             saveImage("customArt.jpg");
+        }
+
+        private void generateDataset_Click(object sender, EventArgs e)
+        {
+            Random rand = new Random();
+            for(int i = 0; i < Convert.ToInt32(pageNumber.Text); i++)
+            {
+                string path = "raw_page_images/0 (";
+                path += rand.Next(0, 3958) + ")";
+                
+                var files = Directory.GetFiles(path, "*.jpg");
+                System.IO.File.Copy(files[rand.Next(files.Length)], "Pages/" + i + ".jpg");
+            }
         }
     }
 }

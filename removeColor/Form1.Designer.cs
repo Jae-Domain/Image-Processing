@@ -35,22 +35,24 @@ namespace removeColor
             this.saturateBlue = new System.Windows.Forms.Button();
             this.saturateGreen = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.greenIntensity = new System.Windows.Forms.TrackBar();
+            this.blueIntensity = new System.Windows.Forms.TrackBar();
+            this.redIntensity = new System.Windows.Forms.TrackBar();
+            this.grayscaleButton = new System.Windows.Forms.Button();
+            this.loadFile = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.loadFile = new System.Windows.Forms.Button();
-            this.grayscaleButton = new System.Windows.Forms.Button();
-            this.redIntensity = new System.Windows.Forms.TrackBar();
-            this.blueIntensity = new System.Windows.Forms.TrackBar();
-            this.greenIntensity = new System.Windows.Forms.TrackBar();
-            this.button3 = new System.Windows.Forms.Button();
             this.originalPreview = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.generateDataset = new System.Windows.Forms.Button();
+            this.pageNumber = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.redIntensity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blueIntensity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenIntensity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueIntensity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redIntensity)).BeginInit();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.originalPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,6 +111,8 @@ namespace removeColor
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.PapayaWhip;
+            this.groupBox1.Controls.Add(this.pageNumber);
+            this.groupBox1.Controls.Add(this.generateDataset);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.greenIntensity);
             this.groupBox1.Controls.Add(this.blueIntensity);
@@ -126,6 +130,65 @@ namespace removeColor
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Color Modes";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.LightGray;
+            this.button3.Location = new System.Drawing.Point(38, 290);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(97, 40);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Custom Saturation";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // greenIntensity
+            // 
+            this.greenIntensity.Location = new System.Drawing.Point(141, 152);
+            this.greenIntensity.Maximum = 255;
+            this.greenIntensity.Name = "greenIntensity";
+            this.greenIntensity.Size = new System.Drawing.Size(128, 45);
+            this.greenIntensity.TabIndex = 12;
+            this.greenIntensity.Value = 100;
+            // 
+            // blueIntensity
+            // 
+            this.blueIntensity.Location = new System.Drawing.Point(141, 198);
+            this.blueIntensity.Maximum = 255;
+            this.blueIntensity.Name = "blueIntensity";
+            this.blueIntensity.Size = new System.Drawing.Size(128, 45);
+            this.blueIntensity.TabIndex = 11;
+            this.blueIntensity.Value = 100;
+            // 
+            // redIntensity
+            // 
+            this.redIntensity.Location = new System.Drawing.Point(141, 101);
+            this.redIntensity.Maximum = 255;
+            this.redIntensity.Name = "redIntensity";
+            this.redIntensity.Size = new System.Drawing.Size(128, 45);
+            this.redIntensity.TabIndex = 10;
+            this.redIntensity.Value = 100;
+            // 
+            // grayscaleButton
+            // 
+            this.grayscaleButton.BackColor = System.Drawing.Color.LightGray;
+            this.grayscaleButton.Location = new System.Drawing.Point(38, 244);
+            this.grayscaleButton.Name = "grayscaleButton";
+            this.grayscaleButton.Size = new System.Drawing.Size(97, 40);
+            this.grayscaleButton.TabIndex = 8;
+            this.grayscaleButton.Text = "Grayscale";
+            this.grayscaleButton.UseVisualStyleBackColor = false;
+            this.grayscaleButton.Click += new System.EventHandler(this.grayscaleButton_Click);
+            // 
+            // loadFile
+            // 
+            this.loadFile.Location = new System.Drawing.Point(6, 336);
+            this.loadFile.Name = "loadFile";
+            this.loadFile.Size = new System.Drawing.Size(97, 40);
+            this.loadFile.TabIndex = 9;
+            this.loadFile.Text = "Load File";
+            this.loadFile.UseVisualStyleBackColor = true;
+            this.loadFile.Click += new System.EventHandler(this.loadFile_Click);
             // 
             // progressBar1
             // 
@@ -145,65 +208,6 @@ namespace removeColor
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Preview";
             // 
-            // loadFile
-            // 
-            this.loadFile.Location = new System.Drawing.Point(38, 336);
-            this.loadFile.Name = "loadFile";
-            this.loadFile.Size = new System.Drawing.Size(97, 40);
-            this.loadFile.TabIndex = 9;
-            this.loadFile.Text = "Load File";
-            this.loadFile.UseVisualStyleBackColor = true;
-            this.loadFile.Click += new System.EventHandler(this.loadFile_Click);
-            // 
-            // grayscaleButton
-            // 
-            this.grayscaleButton.BackColor = System.Drawing.Color.LightGray;
-            this.grayscaleButton.Location = new System.Drawing.Point(38, 244);
-            this.grayscaleButton.Name = "grayscaleButton";
-            this.grayscaleButton.Size = new System.Drawing.Size(97, 40);
-            this.grayscaleButton.TabIndex = 8;
-            this.grayscaleButton.Text = "Grayscale";
-            this.grayscaleButton.UseVisualStyleBackColor = false;
-            this.grayscaleButton.Click += new System.EventHandler(this.grayscaleButton_Click);
-            // 
-            // redIntensity
-            // 
-            this.redIntensity.Location = new System.Drawing.Point(141, 101);
-            this.redIntensity.Maximum = 255;
-            this.redIntensity.Name = "redIntensity";
-            this.redIntensity.Size = new System.Drawing.Size(128, 45);
-            this.redIntensity.TabIndex = 10;
-            this.redIntensity.Value = 100;
-            // 
-            // blueIntensity
-            // 
-            this.blueIntensity.Location = new System.Drawing.Point(141, 198);
-            this.blueIntensity.Maximum = 255;
-            this.blueIntensity.Name = "blueIntensity";
-            this.blueIntensity.Size = new System.Drawing.Size(128, 45);
-            this.blueIntensity.TabIndex = 11;
-            this.blueIntensity.Value = 100;
-            // 
-            // greenIntensity
-            // 
-            this.greenIntensity.Location = new System.Drawing.Point(141, 152);
-            this.greenIntensity.Maximum = 255;
-            this.greenIntensity.Name = "greenIntensity";
-            this.greenIntensity.Size = new System.Drawing.Size(128, 45);
-            this.greenIntensity.TabIndex = 12;
-            this.greenIntensity.Value = 100;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.LightGray;
-            this.button3.Location = new System.Drawing.Point(38, 290);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 40);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Custom Saturation";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // originalPreview
             // 
             this.originalPreview.Location = new System.Drawing.Point(93, 437);
@@ -221,6 +225,24 @@ namespace removeColor
             this.label1.TabIndex = 8;
             this.label1.Text = "Original Image";
             // 
+            // generateDataset
+            // 
+            this.generateDataset.Location = new System.Drawing.Point(109, 336);
+            this.generateDataset.Name = "generateDataset";
+            this.generateDataset.Size = new System.Drawing.Size(96, 40);
+            this.generateDataset.TabIndex = 14;
+            this.generateDataset.Text = "Generate Dataset";
+            this.generateDataset.UseVisualStyleBackColor = true;
+            this.generateDataset.Click += new System.EventHandler(this.generateDataset_Click);
+            // 
+            // pageNumber
+            // 
+            this.pageNumber.Location = new System.Drawing.Point(211, 356);
+            this.pageNumber.Name = "pageNumber";
+            this.pageNumber.Size = new System.Drawing.Size(44, 20);
+            this.pageNumber.TabIndex = 15;
+            this.pageNumber.Text = "20";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,10 +258,10 @@ namespace removeColor
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.redIntensity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blueIntensity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenIntensity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueIntensity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redIntensity)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.originalPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -264,6 +286,8 @@ namespace removeColor
         private System.Windows.Forms.TrackBar redIntensity;
         private System.Windows.Forms.PictureBox originalPreview;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox pageNumber;
+        private System.Windows.Forms.Button generateDataset;
     }
 }
 
