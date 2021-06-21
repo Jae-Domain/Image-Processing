@@ -1,10 +1,4 @@
-# SRCA-Comic Research
- In participation with SRCA REU program Summer 2021
-
-Faculty Advisor: Dr. Arnav Jhala
-Contributors: Janelle Domantay, Josie Koelsch
-
-Our project aims to determine how human cognition and stimuli are affected by changing color and saturation in comics. To aid this research, we have constructed the "Anti-Colorization" program to prototype images that have had their color removed or altered. 
+# Image Processing Comic Research
 
 Line Art
 Generates the lineart of an image by removing all colors that are above a specified brightness.
